@@ -1,5 +1,6 @@
 package net.vinlabs.springboot.repository;
 
+import net.vinlabs.springboot.integration.AstractionBaseTest;
 import net.vinlabs.springboot.model.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) // this disables the in memory database and enables the actual database
-public class EmployeeRepositoryIntegrationTests {
+public class EmployeeRepositoryIntegrationTests extends AstractionBaseTest {
 
     @Autowired
     private EmployeeRepository employeeRepository;
